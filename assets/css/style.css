@@ -1,0 +1,260 @@
+:root {
+    --blue-gray: rgba(139, 233, 250, 0.87);
+    --navy-gray: rgba(49, 49, 97, 0.911);
+}
+
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS';
+    font-size: x-large;
+}
+
+header {
+    background-color: rgb(62, 65, 65);
+    padding: 20px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+
+} 
+/* Header element */
+
+header h1 {
+    background-color: var(--blue-gray);
+    text-align: end;
+    padding-left: 50px;
+    padding-bottom: 5px+;
+    padding-top: 5px;
+    padding-right: 10px;
+    width: 25%;
+    color: rgb(62, 65, 65);
+}
+
+
+
+header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    padding-right: 20px;
+    font-size: larger;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+}
+/* Header navigation bar */
+
+header nav ul {
+    list-style-type: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+
+}
+
+
+section h1 {
+    color: var(--navy-gray);
+    display: inline-block;
+    padding-left: 10%;
+}
+
+/* Main section headers on left of webpage */
+
+a {
+    color: var(--blue-gray);
+    text-decoration: underline;
+}
+
+.main-image {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/Ocean_Floor.png");
+    background-size: contain;
+    background-position: center;
+    margin: 0;
+}
+/* Main image banner */
+
+.main-image section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+}
+
+figcaption {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1%;
+    background-color: var(--blue-gray);
+    margin-right: 40px;
+    font-size: xx-large;
+    color: rgb(62, 65, 65);
+}
+/* Main image caption */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+/* main content area in flexed column of separate rows/sections */
+
+main section {
+    display: flex;
+    flex-direction: row;
+}
+
+/* each content area/section is a row on top of one another */
+
+main section .description p {
+    padding-left: 40px;
+    width: 90%;
+    color: var(--navy-gray);
+    font-weight: bold;
+}
+
+.description {
+    flex-direction: column;
+    padding-right: 40px;
+}
+
+.section-title {
+    display: block;
+    min-width: 150px;
+    border-right: 4px solid var(--navy-gray);
+    font-size: xx-large;
+    color: var(--navy-gray);
+}
+
+.large {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.small {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+}
+
+/* contains all flexed application/placeholder images */
+
+.flex-item-center {
+    flex: 100%;
+    height: 400px;
+    position: relative;
+}
+
+/* flexes main/larger app to span entire in Work section */
+
+.flex-item-left {
+    flex: 1 1 49%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    height: 250px;
+    position: relative;
+}
+/* flexes secondary/smaller apps to the left in Work section */
+
+.flex-item-right {
+    flex: 1 1 49%;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    height: 250px;
+    position: relative;
+}
+
+/* flexes secondary/smaller apps to the right in Work section */
+
+.highlight {
+    background-color: gold;
+}
+
+.highlight img:hover {
+    opacity: 0.8;
+    border: 1px solid gold;
+
+}
+
+/* the above two classes create a highlight effect when hovering over application images in Work section */
+
+
+.flex-item-center .info,
+.flex-item-left .info,
+.flex-item-right .info {
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    padding-right: 80px;
+    padding-left: 20px;
+    background-color: var(--blue-gray);
+    color: rgb(62, 65, 65);
+    font-size: smaller;
+}
+
+/* positions labels in bottom left corner of application divs in Work section */
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+.contact-list {
+    text-decoration: underline;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: larger;
+    padding-right: 40px;
+    color: var(--navy-gray);
+}
+/* properties for list of contact information in Contact Me section*/
+
+section nav ul li a {
+    color: var(--navy-gray);
+}
+
+@media screen and (max-width: 992) {
+    *{
+        font-size:smaller;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    .contacts {
+        flex-direction: column;
+    }
+}
+/* flexes items to fall underneath each other at narrower screen sizes */
