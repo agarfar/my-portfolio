@@ -17,8 +17,9 @@ header {
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
+    width: 100%;
+}
 
-} 
 /* Header element */
 
 header h1 {
@@ -44,6 +45,7 @@ header nav {
     justify-content: flex-end;
     width: 100%;
 }
+
 /* Header navigation bar */
 
 header nav ul {
@@ -52,15 +54,18 @@ header nav ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    width: 50%;
+    width: 100%;
 }
 
 header nav ul li {
-    display: inline-block;
+    display: flex;
     margin-left: 25px;
-
 }
 
+nav ul li a {
+    display: flex;
+    align-items: center;
+}
 
 section h1 {
     color: var(--navy-gray);
@@ -84,6 +89,7 @@ a {
     background-position: center;
     margin: 0;
 }
+
 /* Main image banner */
 
 .main-image section {
@@ -103,12 +109,14 @@ figcaption {
     font-size: xx-large;
     color: rgb(62, 65, 65);
 }
+
 /* Main image caption */
 
 main {
     display: flex;
     flex-direction: column;
 }
+
 /* main content area in flexed column of separate rows/sections */
 
 main section {
@@ -120,7 +128,7 @@ main section {
 
 main section .description p {
     padding-left: 40px;
-    width: 90%;
+    width: 100%;
     color: var(--navy-gray);
     font-weight: bold;
 }
@@ -176,6 +184,7 @@ main section .description p {
     height: 250px;
     position: relative;
 }
+
 /* flexes secondary/smaller apps to the left in Work section */
 
 .flex-item-right {
@@ -234,27 +243,92 @@ main section .description p {
     padding-right: 40px;
     color: var(--navy-gray);
 }
+
 /* properties for list of contact information in Contact Me section*/
 
 section nav ul li a {
     color: var(--navy-gray);
 }
 
-@media screen and (max-width: 992) {
-    *{
-        font-size:smaller;
+
+@media screen and (max-width: 992px) {
+    /*resize elements and decrease font size for different screens */
+
+    section nav ul li,
+    section nav ul li a {
+        font-size: 2.4vw;
     }
-    
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 856px) {
+    header nav ul li a {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 768px) { 
+    
 
     header {
         flex-wrap: wrap;
     }
 
-    .contacts {
+    header h1 {
+        width: 100%;
+    }
+
+    main section {
+        display: flex;
         flex-direction: column;
     }
+
+
+    .contacts {
+        flex-direction: column;
+        width: unset;
+        align-items: flex-start;
+    }
+
+    .contact-list {
+        align-items: flex-start;
+        padding-left: 0;
+    }
+
+    .section-title {
+        border-right: unset;
+        border-bottom: 4px solid var(--navy-gray);
+        font-size: 4vw;
+    }
+
+    section nav ul li {
+        color: var(--navy-gray);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px
+    }
+
+    section nav ul li,
+    section nav ul li a {
+        font-size: 4vw;
+    }
+
+    .flex-item-left {
+        flex: 50%;
+        margin-right: 1px;
+    }
+
+    .flex-item-right {
+        flex: 50%;
+        margin-left: 1px;
+    }
+
+    figcaption {
+        font-size: 4vw;
+    }
+
+    * {
+        font-size: 4vw;
+    }
 }
+
 /* flexes items to fall underneath each other at narrower screen sizes */
