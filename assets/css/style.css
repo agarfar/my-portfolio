@@ -266,8 +266,8 @@ section nav ul li a {
     }
 }
 
-@media screen and (max-width: 768px) { 
-    
+@media screen and (max-width: 768px) {
+
 
     header {
         flex-wrap: wrap;
