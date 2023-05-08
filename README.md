@@ -14,7 +14,7 @@ Instructions:
 1. Access the website at the provided URL: https://agarfar.github.io/my-portfolio/
 2. Click the links at the top right of the page to browse the website content.
 3. Hover over images of the listed applications in the "Work" section to highlight and bring them into focus. 
-4. Click on a non-placeholder application to navigate to its webpage. 
+4. Click on an application to navigate to its webpage. 
 
 The website should resemble the attached screenshot:
 
